@@ -15,6 +15,7 @@ BuildingEscape/Content/StarterContent/
 
 *.VC.db
 BuildingEscape/BuildingEscape.VC.VC.opendb
-BuildingEscape/.vs/BuildingEscape/v15/ipch/AutoPCH/BUILDINGESCAPE-fd1ac182/OPENDOOR-89cfc9eb/OPENDOOR.ipch
+BuildingEscape/.vs/BuildingEscape/v15/ipch/AutoPCH/*
 BuildingEscape/.vs/BuildingEscape/v15/Solution.VC.db-wal
 BuildingEscape/.vs/BuildingEscape/v15/Solution.VC.db-shm
+
