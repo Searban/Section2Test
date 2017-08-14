@@ -23,8 +23,16 @@ void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
+	// look for attached physics handle
+	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	if (PhysicsHandle)
+	{
+		// Physics Handle is found
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s No Physics Handle Component Found"), *(GetOwner()->GetName()));
+	}
 }
 
 
