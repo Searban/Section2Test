@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "Components/InputComponent.h"
 #include "Grabber.generated.h"
 
 
@@ -30,4 +31,10 @@ private:
 
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	
+	UInputComponent* InputComponent = nullptr;
+	
+	// Ray-cast and grab what's in reach
+	void Grab();
+	// Called when grab is released
+	void Release();
 };
