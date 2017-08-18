@@ -61,7 +61,7 @@ void UGrabber::Grab()
 	/// If we hit something then attach a physics handle
 	if (ActorHit)
 	{
-		PhysicsHandle->GrabComponentAtLocationWithRotation(ComponentToGrab, NAME_None, ActorHit->GetActorLocation(), ActorHit->GetActorRotation());
+		PhysicsHandle->GrabComponentAtLocationWithRotation(ComponentToGrab, NAME_None, ComponentToGrab->GetOwner()->GetActorLocation(), FRotator(0.f, 0.f, 0.f));
 	}
 }
 
@@ -90,8 +90,8 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 	DrawDebugLine
 	(
 	GetWorld(),
-	PlayerViewPointLocation,
-	LineTraceEnd,
+	GetReachLineStart(),
+	GetReachLineEnd(),
 	FColor(255, 0, 0),
 	false,
 	0.f,
